@@ -6,7 +6,7 @@ class UIShellBody extends Component {
   components = {
     "Stock Items": StockItemList
   };
-  defaultComponent = "Display Form";
+  defaultComponent = "Stock Items";
 
   render() {
     const PatternName = this.components[
@@ -14,7 +14,7 @@ class UIShellBody extends Component {
     ];
     return (
       <div className="pattern-container">
-        <PatternName showDescription={true} />
+        <PatternName showDescription={true} stockService={this.props.stockService} />
       </div>
     );
   }
